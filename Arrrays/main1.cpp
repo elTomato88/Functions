@@ -1,4 +1,4 @@
-﻿#include<iostream>
+﻿﻿#include <iostream>
 using namespace std;
 
 #define delimiter "\n----------------------------------------\n"
@@ -19,23 +19,14 @@ void Sort(double arr[], const int n);
 
 int Sum(int arr[], const int n);
 double Sum(double arr[], const int n);
-int Sum(int arr[ROWS][COLS], const int ROWS, const int COLS);
-double Sum(double arr[ROWS][COLS], const int ROWS, const int COLS);
 
 double Avg(int arr[], const int n);
-double Avg(int arr[ROWS][COLS], const int ROWS, const int COLS);
 double Avg(double arr[], const int n);
-double Avg(double arr[ROWS][COLS], const int ROWS, const int COLS);
 
 int MinValueIn(int arr[], const int n);
-int MinValueIn(int arr[ROWS][COLS], const int ROWS, const int COLS);
 double MinValueIn(double arr[], const int n);
-double MinValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS);
-
 int MaxValueIn(int arr[], const int n);
-int MaxValueIn(int arr[ROWS][COLS], const int ROWS, const int COLS);
 double MaxValueIn(double arr[], const int n);
-double MaxValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void ShiftLeft(int arr[], const int n, const int shifts);
 void ShiftLeft(double arr[], const int n, const int shifts);
@@ -82,19 +73,9 @@ void main()
 		{55,89,144},
 	};
 
-	double i_brr_2[ROWS][COLS] =
-	{
-		{3.5,5.1,8.3},
-		{13,21,34},
-		{55,89,144},
-	};
-	
-
 	FillRand(i_arr_2, ROWS, COLS);
 	Print(i_arr_2, ROWS, COLS);
 	cout << "Сумма элементов массива: " << Sum(i_arr_2, ROWS, COLS) << endl;
-	cout << "Тест: " << MaxValueIn(i_brr_2, ROWS, COLS) << endl;
-	
 }
 
 void FillRand(int arr[], const int n)
@@ -191,18 +172,6 @@ int Sum(int arr[], const int n)
 	}
 	return sum;
 }
-int Sum(int arr[ROWS][COLS], const int ROWS, const int COLS)
-{
-	int sum = 0;
-	for (int i = 0; i < ROWS; i++)
-	{
-		for (int j = 0; j < COLS; j++)
-		{
-			sum += arr[i][j];
-		}
-	}
-	return sum;
-}
 double Sum(double arr[], const int n)
 {
 	double sum = 0;
@@ -212,30 +181,10 @@ double Sum(double arr[], const int n)
 	}
 	return sum;
 }
-double Sum(double arr[ROWS][COLS], const int ROWS, const int COLS)
-{
-	double sum = 0;
-	for (int i = 0; i < ROWS; i++)
-	{
-		for (int j = 0; j < COLS; j++)
-		{
-			sum += arr[i][j];
-		}
-	}
-	return sum;
-}
 
 double Avg(int arr[], const int n)
 {
 	return (double)Sum(arr, n) / n;
-}
-double Avg(int arr[ROWS][COLS], const int ROWS, const int COLS)
-{
-	return (double)Sum(arr, ROWS, COLS)/ (ROWS*COLS);
-}
-double Avg(double arr[ROWS][COLS], const int ROWS, const int COLS)
-{
-	return (double)Sum(arr, ROWS, COLS) / (ROWS * COLS);
 }
 double Avg(double arr[], const int n)
 {
@@ -248,32 +197,6 @@ int MinValueIn(int arr[], const int n)
 	for (int i = 1; i < n; i++)
 	{
 		if (arr[i] < min)min = arr[i];
-	}
-	return min;
-}
-int MinValueIn(int arr[ROWS][COLS], const int ROWS, const int COLS)
-{
-	int min = arr[0][0];
-	for (int i = 0; i < ROWS; i++)
-	{
-		for (int j = 0; j < COLS; j++)
-		{
-			if (arr[i][j] < min)min = arr[i][j];
-			
-		}
-	}
-	return min;
-}
-double MinValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS)
-{
-	double min = arr[0][0];
-	for (int i = 0; i < ROWS; i++)
-	{
-		for (int j = 0; j < COLS; j++)
-		{
-			if (arr[i][j] < min)min = arr[i][j];
-
-		}
 	}
 	return min;
 }
@@ -296,38 +219,12 @@ int MaxValueIn(int arr[], const int n)
 	}
 	return max;
 }
-int MaxValueIn(int arr[ROWS][COLS], const int ROWS, const int COLS)
-{
-	int max = arr[0][0];
-	for (int i = 0; i < ROWS; i++)
-	{
-		for (int j = 0; j < COLS; j++)
-		{
-			if (arr[i][j] > max)max = arr[i][j];
-
-		}
-	}
-	return max;
-}
 double MaxValueIn(double arr[], const int n)
 {
 	double max = arr[0];
 	for (int i = 1; i < n; i++)
 	{
 		if (arr[i] > max)max = arr[i];
-	}
-	return max;
-}
-double MaxValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS)
-{
-	double max = arr[0][0];
-	for (int i = 0; i < ROWS; i++)
-	{
-		for (int j = 0; j < COLS; j++)
-		{
-			if (arr[i][j] > max)max = arr[i][j];
-
-		}
 	}
 	return max;
 }

@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+#define delimiter "\n............................\n"
 int Sum(int a, int b, int d=0)
 {
 	int c = a + b;
@@ -35,6 +35,23 @@ int main()
 	cout << a << "-" << b << "=" << Difference(a, b) << endl;
 	cout << a << "*" << b << "=" << Prodact(a, b) << endl;
 	cout << a << "/" << b << "=" << Quotient(a, b) << endl;
+	cout << delimiter << endl;
+	const int ROWS = 3;
+	const int COLS = 5;
+	int i_arr_2[ROWS][COLS] =
+	{
+		{3,5,8},
+		{13,21,34},
+		{55,89,144},
+	};
 	
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			cout << i_arr_2[i][j] << "\t";
+		}
+		cout << endl;
+	}
 	return 0;
 }
