@@ -12,19 +12,6 @@ void FillRand(int arr[], const int n);	//Заполняет массив слу�
 void FillRand(double arr[], const int n);	//Заполняет массив случайными числами
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 void ShiftLeft(int arr[], const int n, const int shifts);
 void ShiftLeft(double arr[], const int n, const int shifts);
 void ShiftRight(int arr[], const int n, const int shifts);
