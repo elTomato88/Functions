@@ -129,6 +129,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TemplatesPrint.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="constants.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TemplatesAvg.h" />
+    <ClInclude Include="TemplatesMax.h" />
+    <ClInclude Include="TemplatesMin.h" />
+    <ClInclude Include="TemplatesPrint.h" />
+    <ClInclude Include="TemplatesSort.h" />
+    <ClInclude Include="TemplatesSum.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
