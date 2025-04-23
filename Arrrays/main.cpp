@@ -125,7 +125,7 @@ void ShiftLeft(double arr[], const int n, const int shifts)
 {
 	for (int i = 0; i < shifts; i++)
 	{
-		int buffer = arr[0];
+		double buffer = arr[0];
 		for (int i = 1; i < n; i++)
 		{
 			arr[i - 1] = arr[i];

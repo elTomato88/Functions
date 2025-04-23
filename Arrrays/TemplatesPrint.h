@@ -1,13 +1,11 @@
 #pragma once
 #include"constants.h"
 #include"stdafx.h"
+#define EXTEM extern "C++" template<typename T> __declspec(dllexport)
 
-template<typename T>
-void Print(T arr[], const int n);
-template<typename T>
-void Print(T arr[ROWS][COLS], const int ROWS, const int COLS);
-template<typename T>
-void Print(T arr[], const int n)
+EXTEM void Print(T arr[], const int n);
+EXTEM void Print(T arr[ROWS][COLS], const int ROWS, const int COLS);
+EXTEM void Print(T arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -15,8 +13,7 @@ void Print(T arr[], const int n)
 	}
 	cout << endl;
 }
-template<typename T>
-void Print(T arr[ROWS][COLS], const int ROWS, const int COLS)
+EXTEM void Print(T arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
 	{
