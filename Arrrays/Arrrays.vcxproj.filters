@@ -21,6 +21,12 @@
     <ClCompile Include="TemplatesPrint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FillRand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testTemplate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TemplatesPrint.h">
@@ -45,6 +51,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TemplatesMax.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FillRand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="testTemplates.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
